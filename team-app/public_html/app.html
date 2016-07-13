@@ -9,30 +9,43 @@
     </head>
 <body onload="highScore()">
     <h1> English/Spanish App </h1>
-    <br>
-    <h2>  
+    <br>  
 <div id="one">
 	<h2>SCORE</h2>
-	<span id="score">0</span><br>
-	<img id="picture" src="images/banana.png" alt="banana" height="300"/>
-
+        <span id="score">0</span><br>
+        <br>
+        <br>
+        <br>
+</div>
     
-    <div class="left">
-        <h3 id="wrong" onclick="changeTextWrong(this)">MANZANA</h3>
-    </div>
+    
+    <div id="question">
+        <img id="picture" src="/app/images/banana.png" alt="banana" height="200"/>
+        <br>
+        <br>
+        <br>
+        <div class="left">
+            <h3 id="wrong" onclick="changeTextWrong(this)">MANZANA</h3>
+        </div>
 
-    <div class="right">
-        <h3  id="right" onclick="changeTextRight(this)">PLÁTANO</h3>
+        <div class="right">
+            <h3  id="right" onclick="changeTextRight(this)">PLÁTANO</h3>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="next" style="display:none;">
+            <button type="button" onclick="next()">Next Question</button>
+        </div>
     </div>
+     <br>
+        <br>
     <h2>Top Score</h2>
     <span id="top_score">--</span>
     <br>
     <br>
     <br>
     <br>
-    <div id="next" style="display:none;">
-        <button onClick="changeScreen()">Next</button>
-    </div>
-</div>
+    
 </body>
 </html>
