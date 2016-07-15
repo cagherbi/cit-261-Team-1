@@ -47,7 +47,40 @@
   xhttp.send();
 }
 
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+
+//question 2
+        function next1() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "question3.html", true);
+  xhttp.send();
+}
+
 var xmlhttp = createXmlHttpRequestObject();
+
 
 function createXmlHttpRequestObject() {
     var xmlhttp;
@@ -60,5 +93,70 @@ function createXmlHttpRequestObject() {
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
 }
-       
 
+
+
+
+        function next2() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "question4.html", true);
+  xhttp.send();
+}
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+
+
+
+
+
+        function next3() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "question4.html", true);
+  xhttp.send();
+}
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
