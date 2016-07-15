@@ -29,7 +29,7 @@
           //  document.getElementById("one").innerHTML = "";
         //}
         
-        function next() {
+        function orange() {
             var xhttp;
             if (window.XMLHttpRequest) {
             // code for modern browsers
@@ -43,45 +43,12 @@
       document.getElementById("question").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "question2.html", true);
-  xhttp.send();
-}
-
-function createXmlHttpRequestObject() {
-    var xmlhttp;
-    
-    if (window.XMLHttpRequest) {
-    // code for modern browsers
-    xmlhttp = new XMLHttpRequest();
-    } else {
-    // code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-}
-
-
-//question 2
-        function next1() {
-            var xhttp;
-            if (window.XMLHttpRequest) {
-            // code for modern browsers
-                xhttp = new XMLHttpRequest();
-            } else {
-            // code for IE6, IE5
-            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("question").innerHTML = xhttp.responseText;
-    }
-  };
-  xhttp.open("GET", "question3.html", true);
+  xhttp.open("GET", "orange.html", true);
   xhttp.send();
 }
 
 var xmlhttp = createXmlHttpRequestObject();
 
-
 function createXmlHttpRequestObject() {
     var xmlhttp;
     
@@ -94,10 +61,7 @@ function createXmlHttpRequestObject() {
   }
 }
 
-
-
-
-        function next2() {
+ function lemon() {
             var xhttp;
             if (window.XMLHttpRequest) {
             // code for modern browsers
@@ -111,9 +75,12 @@ function createXmlHttpRequestObject() {
       document.getElementById("question").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "question4.html", true);
+  xhttp.open("GET", "lemon.html", true);
   xhttp.send();
 }
+
+var xmlhttp = createXmlHttpRequestObject();
+
 function createXmlHttpRequestObject() {
     var xmlhttp;
     
@@ -126,12 +93,7 @@ function createXmlHttpRequestObject() {
   }
 }
 
-
-
-
-
-
-        function next3() {
+ function apple() {
             var xhttp;
             if (window.XMLHttpRequest) {
             // code for modern browsers
@@ -145,9 +107,235 @@ function createXmlHttpRequestObject() {
       document.getElementById("question").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "question4.html", true);
+  xhttp.open("GET", "apple.html", true);
   xhttp.send();
 }
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function grapes() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "grapes.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function pear() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "pear.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function pineapple() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "pineapple.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function pomegranate() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "pomegranate.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function strawberry() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "strawberry.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function watermelon() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "watermelon.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject() {
+    var xmlhttp;
+    
+    if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+}
+
+function end() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+            // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("question").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "end.html", true);
+  xhttp.send();
+}
+
+var xmlhttp = createXmlHttpRequestObject();
 
 function createXmlHttpRequestObject() {
     var xmlhttp;

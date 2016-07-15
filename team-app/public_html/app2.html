@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+       <title>Test Program</title>
+       <link rel="stylesheet" href="/styles/styles.css">
+       
+       <style> 
+img {
+    text-align: center;
+    color: white;
+    position: relative;
+    animation-name: title;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes title {
+     0%  {color: white; 
+          left:0px; 
+          top:0px;   
+  }
+  
+     25%  {color: white; 
+           left:50px; 
+           top:0px;
+  }
+  
+     50%  {color: white; 
+           left:50px; 
+           top:50px;
+  }
+  
+     75%  {color: red; 
+           left:0px; 
+           top:50px; 
+  }
+  
+     100%  {color: white; 
+           left:0px; 
+           top:0px;
+     
+  }
+}
+</style>
+    </head>
+<body>
+    <h1> English/Spanish App </h1>
+    <br>
+    <script> 
+        function changeTextWrong(id) {
+            id.style.color='red';
+            document.getElementById("wrong").innerHTML = "Try again!";
+        }
+        
+        function changeTextRight(id) {
+            id.style.color='green';
+            document.getElementById("right").innerHTML = "Correct!";
+            document.getElementById('next').style.display = "block";
+        }
+        
+        function changeScreen() {
+            document.getElementById("one").innerHTML = "";
+        }
+    </script>    
+<div id="one">
+    <img id="picture" src="/images/orange.png" alt="orange" height="200"/>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="left">
+        <h3 id="wrong" onclick="changeTextWrong(this)">CEBOLLLA</h3>
+    </div>
+
+    <div class="right">
+        <h3  id="right" onclick="changeTextRight(this)">NARANJA</h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="next" style="display:none;">
+        <button onClick="changeScreen()">Next</button>
+    </div>
+</div>
+</body>
+</html>﻿
