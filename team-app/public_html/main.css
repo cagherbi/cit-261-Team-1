@@ -5,9 +5,154 @@ and open the template in the editor.
 */
 /* 
     Created on : Jul 12, 2016, 5:33:03 PM
-    Author     : Chino Agherbi
+    Author: Chino Agherbi
+
+Modified: Jul 16, 2016
+Author     : Melissa Platt
 */
 
+/*media for small screens*/
+@media screen and (max-width: 768px) {
+    
+    img{
+        position:absolute;
+        left: 350px;
+        
+        top: 200px;
+        z-index: 0;
+        width: 100px;
+        height: 100px;
+    }
+    body{
+        text-align: center;
+        font-family:helvetica;
+	font-size: 16px;
+	background: white;
+	padding-top: 10px;
+    } 
+    h1{
+    color:black;
+    font-family:helvetica;
+    text-align: center;
+    font-size: 250%;
+   border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 20% round; 
+    -o-border-image: url(border.png) 20% round; 
+    border-image: url(border.png) 20% round;
+    }
+    
+   .right{
+       
+    text-align:center;
+    position: relative;
+    background-color: pink;
+    -webkit-animation-duration: 4s; 
+    animation-name: box;
+    animation-duration: 4s;
+   border-radius: 25px;
+    background: #0074b5;
+    padding: 20px; 
+    width: 99px;
+    height:24px;    
+    }
+    @-webkit-keyframes box{
+    0%   {background-color: pink;}
+    25%  {background-color: yellow;}
+    
+   
+}
+
+.left{
+       
+    text-align:center;
+    position: relative;
+    background-color: pink;
+    -webkit-animation-duration: 4s; 
+    animation-name: box;
+    animation-duration: 4s;
+   border-radius: 25px;
+    background: #b2d618;
+    padding: 20px; 
+    width: 99px;
+    height:24px;    
+    }
+    @-webkit-keyframes box{
+    0%   {background-color: pink;}
+    25%  {background-color: yellow;}
+    
+   
+}
+  
+}
+    
+    
+    
+    
+ /* Normal screens */
+    
+    
+body{
+        text-align: center;
+        font-family:helvetica;
+	font-size: 16px;
+	background: white;
+	padding-top: 10px;
+    }     
+    
+ .right{
+       
+    text-align:center;
+    position: relative;
+    background-color: pink;
+    -webkit-animation-duration: 4s; 
+    animation-name: box;
+    animation-duration: 4s;
+   border-radius: 25px;
+    background: #0074b5;
+    padding: 20px; 
+    width: 99px;
+    height:24px;    
+    }
+    @-webkit-keyframes box{
+    0%   {background-color: pink;}
+    25%  {background-color: yellow;}
+    
+   
+}
+
+.left{
+       
+    text-align:center;
+    position: relative;
+    background-color: pink;
+    -webkit-animation-duration: 4s; 
+    animation-name: box;
+    animation-duration: 4s;
+   border-radius: 25px;
+    background: #b2d618;
+    padding: 20px; 
+    width: 99px;
+    height:24px;    
+    }
+    @-webkit-keyframes box{
+    0%   {background-color: pink;}
+    25%  {background-color: yellow;}
+    
+   
+}
+    h1{
+    color:black;
+    font-family:helvetica;
+    text-align: center;
+    font-size: 250%;
+   border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 20% round; 
+    -o-border-image: url(border.png) 20% round; 
+    border-image: url(border.png) 20% round;
+    }
+    
 img {
     text-align: center;
     color: white;
