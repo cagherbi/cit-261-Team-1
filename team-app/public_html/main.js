@@ -3,46 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-    var score = 0;
-    var topScore;
     function changeTextWrong(id) {
             id.style.color='red';
             document.getElementById("wrong").innerHTML = "Try again!";
-            document.getElementById('next').style.display = "block";
-            localStorage.setItem('Score', score);
         }
         
-        
+        var x = 0;
         
         function changeTextRight(id) {
-            id.style.color='green';
+            id.style.color='black';
             document.getElementById("right").innerHTML = "Correct!";
             document.getElementById('next').style.display = "block";
-            score = score + 10;
-            document.getElementById("score").innerHTML= score;
-            localStorage.setItem('Score', score);
-            setHighScore();
-        }
-/********* These functions run the scoring for the app. ******************/        
-        
-        function getHighScore(){
-        	if(window.localStorage){
-        		topScore = localStorage.getItem('High Score');
-        		document.getElementById("top_score").innerHTML = topScore;
-        	}
+            x = x + 10;
+            document.getElementById("score").innerHTML=x;
+            highScore();
         }
         
-        function setHighScore(){
+        function highScore(){
         	if(window.localStorage){
-        		topScore = localStorage.getItem('High Score'); 
-        		if(score >= topScore){
-        		localStorage.setItem('High Score', score);
-        		document.getElementById("top_score").innerHTML = score;
-        		}
+        		localStorage.setItem('High Score', x);
+        		document.getElementById("top_score").innerHTML = x;
         	}
         }
-    
-/********* These functions run the ajax transitions ******************/  
+        //function changeScreen() {
+          //  document.getElementById("one").innerHTML = "";
+        //}
+        
         function orange() {
             var xhttp;
             if (window.XMLHttpRequest) {
@@ -331,28 +317,43 @@ function createXmlHttpRequestObject() {
   }
 }
 
-function storeName(){
-	var firstName = document.getElementById('fname').value;
-	var lastName = document.getElementById('lname').value;
-	
-	var player = {
-		firstname: firstName,
-		lastname: lastName
-	};	
-	var json = JSON.stringify(player);
-	if(window.localStorage){
-		localStorage.setItem('Player', json);
-	};
-}	
+           function load(){
+            var file = "text.json";
+            var xmlhttp = new XMLHttpRequest();
+            try{
+                
+               xmlhttp = new XMLHttpRequest();
+               
+            }catch (e){
+                
+               try{
+                  xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+					
+               }catch (e) {
+				
+                  try{
+                     xmlhhtp = new ActiveXObject("Microsoft.XMLHTTP");
+                  }catch (e){
+                   
+                     alert("Your browser broke!");
+                     return false;
+                  }
+					
+               }
+            }
+			
+            xmlhttp.onreadystatechange = function(){
+			
+               if (xmlhttp.readyState == 4){
+               
+                  var object = JSON.parse(xmlhttp.responseText);
 
-function load(){
-	var player = JSON.parse(localStorage.getItem('Player'));
-	console.log(player);
-	document.getElementById('name').innerHTML = player.firstname + " " + player.lastname;
-	if(window.localStorage){
-        		topScore = localStorage.getItem('High Score');
-        		score = localStorage.getItem('Score');
-        		document.getElementById("top_score").innerHTML = topScore;
-        		document.getElementById("score").innerHTML= score;
-    }
- }
+                  document.getElementById("name").innerHTML = object.name;
+                  document.getElementById("age").innerHTML = object.age;
+               }
+            }
+			
+            xmlhttp.open("GET", file, true);
+            xmlhttp.send();
+         }
+        
