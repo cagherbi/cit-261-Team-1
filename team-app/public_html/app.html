@@ -11,36 +11,37 @@
 <body onload="getHighScore()">
    
     <h1> English/Spanish App </h1>
-    
+	<form>
+		<p>First Name:</p>
+		<input id="fname" onblur="storeName()"></input>
+		<p>Last Name:</p>
+		<input id="lname" onblur="storeName()"></input>
+	</form>
     <div id="one">
-	<h2>SCORE</h2>
+		<h2>SCORE</h2>
         <span id="score">0</span><br>
-        <br>
-</div>
+	</div>
     
     
     <div id="question">
-        <img id="picture" src="images/banana.png" alt="banana" height="200"/>
-        <br>
-        <br>
-        <br>
+       
         <div class="left">
             <h3 id="wrong" onclick="changeTextWrong(this)">MANZANA</h3>
         </div>
+       
+        <img id="picture" src="images/banana.png" alt="banana" height="200"/>
+       
         <div class="right">
             <h3  id="right" onclick="changeTextRight(this)">PLÁTANO</h3>
         </div>
-
+       
         <div id="next" style="display:none;">
             <button type="button" onclick="orange()">Next Question</button>
         </div>
-    </div>
-     <br>
-        <br>
-    <h2>Top Score</h2>
-    <span id="top_score">--</span>
-    <br>
-
     
+    </div>
+    <h2>Top Score</h2><span id="top_score">--</span>
+    
+
 </body>
 </html>
