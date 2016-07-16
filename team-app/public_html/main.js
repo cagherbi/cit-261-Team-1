@@ -3,32 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+    var score = 0;
+    var topScore;
     function changeTextWrong(id) {
             id.style.color='red';
             document.getElementById("wrong").innerHTML = "Try again!";
+            document.getElementById('next').style.display = "block";
         }
         
-        var x = 0;
+        
         
         function changeTextRight(id) {
             id.style.color='green';
             document.getElementById("right").innerHTML = "Correct!";
             document.getElementById('next').style.display = "block";
-            x = x + 10;
-            document.getElementById("score").innerHTML=x;
-            highScore();
+            score = score + 10;
+            document.getElementById("score").innerHTML= score;
+            setHighScore();
         }
+/********* These functions run the scoring for the app. ******************/        
         
-        function highScore(){
+        function getHighScore(){
         	if(window.localStorage){
-        		localStorage.setItem('High Score', x);
-        		document.getElementById("top_score").innerHTML = x;
+        		topScore = localStorage.getItem('High Score');
+        		document.getElementById("top_score").innerHTML = topScore;
         	}
         }
-        //function changeScreen() {
-          //  document.getElementById("one").innerHTML = "";
-        //}
         
+        function setHighScore(){
+        	if(window.localStorage){
+        		topScore = localStorage.getItem('High Score'); 
+        		if(score >= topScore){
+        		localStorage.setItem('High Score', score);
+        		document.getElementById("top_score").innerHTML = score;
+        		}
+        	}
+        }
+      
+/********* These functions run the ajax transitions ******************/  
         function orange() {
             var xhttp;
             if (window.XMLHttpRequest) {
@@ -317,43 +329,42 @@ function createXmlHttpRequestObject() {
   }
 }
 
-           function load(){
-            var file = "text.json";
-            var xmlhttp = new XMLHttpRequest();
-            try{
-                
-               xmlhttp = new XMLHttpRequest();
-               
-            }catch (e){
-                
-               try{
-                  xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-					
-               }catch (e) {
-				
-                  try{
-                     xmlhhtp = new ActiveXObject("Microsoft.XMLHTTP");
-                  }catch (e){
-                   
-                     alert("Your browser broke!");
-                     return false;
-                  }
-					
-               }
-            }
+function load(){
+	var file = "text.json";
+	var xmlhttp = new XMLHttpRequest();
+	try{
+		
+	   xmlhttp = new XMLHttpRequest();
+	   
+	}catch (e){
+		
+	   try{
+		  xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
 			
-            xmlhttp.onreadystatechange = function(){
+	   }catch (e) {
+		
+		  try{
+			 xmlhhtp = new ActiveXObject("Microsoft.XMLHTTP");
+		  }catch (e){
+		   
+			 alert("Your browser broke!");
+			 return false;
+		  }
 			
-               if (xmlhttp.readyState == 4){
-               
-                  var object = JSON.parse(xmlhttp.responseText);
+	   }
+	}
+	
+	xmlhttp.onreadystatechange = function(){
+	
+	   if (xmlhttp.readyState == 4){
+	   
+		  var object = JSON.parse(xmlhttp.responseText);
 
-                  document.getElementById("name").innerHTML = object.name;
-                  document.getElementById("age").innerHTML = object.age;
-               }
-            }
-			
-            xmlhttp.open("GET", file, true);
-            xmlhttp.send();
-         }
-        
+		  document.getElementById("name").innerHTML = object.name;
+		  document.getElementById("age").innerHTML = object.age;
+	   }
+	}
+	
+		xmlhttp.open("GET", file, true);
+		xmlhttp.send();
+ }
