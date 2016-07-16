@@ -9,6 +9,7 @@
             id.style.color='red';
             document.getElementById("wrong").innerHTML = "Try again!";
             document.getElementById('next').style.display = "block";
+            localStorage.setItem('Score', score);
         }
         
         
@@ -19,6 +20,7 @@
             document.getElementById('next').style.display = "block";
             score = score + 10;
             document.getElementById("score").innerHTML= score;
+            localStorage.setItem('Score', score);
             setHighScore();
         }
 /********* These functions run the scoring for the app. ******************/        
@@ -39,7 +41,7 @@
         		}
         	}
         }
-      
+    
 /********* These functions run the ajax transitions ******************/  
         function orange() {
             var xhttp;
@@ -329,42 +331,28 @@ function createXmlHttpRequestObject() {
   }
 }
 
-function load(){
-	var file = "text.json";
-	var xmlhttp = new XMLHttpRequest();
-	try{
-		
-	   xmlhttp = new XMLHttpRequest();
-	   
-	}catch (e){
-		
-	   try{
-		  xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-			
-	   }catch (e) {
-		
-		  try{
-			 xmlhhtp = new ActiveXObject("Microsoft.XMLHTTP");
-		  }catch (e){
-		   
-			 alert("Your browser broke!");
-			 return false;
-		  }
-			
-	   }
-	}
+function storeName(){
+	var firstName = document.getElementById('fname').value;
+	var lastName = document.getElementById('lname').value;
 	
-	xmlhttp.onreadystatechange = function(){
-	
-	   if (xmlhttp.readyState == 4){
-	   
-		  var object = JSON.parse(xmlhttp.responseText);
+	var player = {
+		firstname: firstName,
+		lastname: lastName
+	};	
+	var json = JSON.stringify(player);
+	if(window.localStorage){
+		localStorage.setItem('Player', json);
+	};
+}	
 
-		  document.getElementById("name").innerHTML = object.name;
-		  document.getElementById("age").innerHTML = object.age;
-	   }
-	}
-	
-		xmlhttp.open("GET", file, true);
-		xmlhttp.send();
+function load(){
+	var player = JSON.parse(localStorage.getItem('Player'));
+	console.log(player);
+	document.getElementById('name').innerHTML = player.firstname + " " + player.lastname;
+	if(window.localStorage){
+        		topScore = localStorage.getItem('High Score');
+        		score = localStorage.getItem('Score');
+        		document.getElementById("top_score").innerHTML = topScore;
+        		document.getElementById("score").innerHTML= score;
+    }
  }
