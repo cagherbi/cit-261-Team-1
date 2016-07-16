@@ -2,46 +2,71 @@
 <html>
     <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
        <title>Test Program</title>
         <link href="main.css" rel="stylesheet" type="text/css">
        
      <script src= "main.js"></script>
     </head>
-<body onload="getHighScore()">
+<body onload="highScore()">
    
     <h1> English/Spanish App </h1>
-	<form>
-		<p>First Name:</p>
-		<input id="fname" onblur="storeName()"></input>
-		<p>Last Name:</p>
-		<input id="lname" onblur="storeName()"></input>
-	</form>
+    
     <div id="one">
-		<h2>SCORE</h2>
+	<h2>SCORE</h2>
         <span id="score">0</span><br>
-	</div>
+        <br>
+</div>
     
     
     <div id="question">
-       
         <img id="picture" src="images/banana.png" alt="banana" height="200"/>
-        
+        <br>
+        <br>
+        <br>
         <div class="left">
-            <h3 id="wrong" onclick="changeTextWrong(this)">MANZANA</h3>
+            <h3 id="wrong" onclick="changeTextWrong(this)">MANZANA</h3> 
         </div>
-       
         <div class="right">
             <h3  id="right" onclick="changeTextRight(this)">PLÁTANO</h3>
         </div>
-       
+
         <div id="next" style="display:none;">
             <button type="button" onclick="orange()">Next Question</button>
         </div>
-    
     </div>
-    <h2>Top Score</h2><span id="top_score">--</span>
+     <br>
+        <br>
+        <div class="spinner"> 
+            <div class="t"> 
+    <h2>T</h2>
+    </div>
+            <div class="o"> 
+    <h2>O</h2>
+    </div>
+            <div class="p"> 
+    <h2>P</h2>
+    </div>
+            <br> 
+            <div class="s"> 
+    <h2>S</h2>
+    </div>
+            <div class="c"> 
+    <h2>C</h2>
+    </div>
+            <div class="oo"> 
+    <h2>O</h2>
+    </div>
+            <div class="r"> 
+    <h2>R</h2>
+    </div>
+            <div class="e"> 
+    <h2>E</h2>
+    </div>
+           
+            
+    <span id="top_score">--</span>
+    <br>
+</div>
     
-
 </body>
 </html>
